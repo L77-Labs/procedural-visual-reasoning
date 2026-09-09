@@ -1,0 +1,10 @@
+This dataset (images, questions, answers, scene parameters, and optional
+teacher rationales) is licensed under Creative Commons Attribution 4.0
+International (CC BY 4.0).
+
+https://creativecommons.org/licenses/by/4.0/
+
+Generator code in scripts/ is MIT (see LICENSE).
+Teacher rationales, when present, were produced with qwen3.8-max through
+the Alibaba Cloud Model Studio API. See DATA_CARD.md for provenance and
+verification boundaries.

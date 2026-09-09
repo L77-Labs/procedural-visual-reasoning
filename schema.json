@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/L77-Labs/procedural-visual-reasoning/schema.json",
+  "title": "Procedural Visual Reasoning Record",
+  "type": "object",
+  "required": ["id", "scene_id", "task", "split", "use", "image", "question", "answer", "scene", "answer_source"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "scene_id": {"type": "string", "minLength": 1},
+    "task": {"type": "string", "minLength": 1},
+    "split": {"enum": ["train", "test"]},
+    "use": {"enum": ["sft", "diagnostic", "probe", "contrast"]},
+    "image": {"type": "string", "minLength": 1},
+    "image_low": {"type": ["string", "null"]},
+    "question": {"type": "string"},
+    "choices": {"type": ["array", "null"], "items": {"type": "string"}},
+    "answer": {"type": ["string", "number", "integer"]},
+    "rationale": {"type": ["string", "null"]},
+    "rationale_source": {"enum": ["geometry", "physics", "formula", "teacher_model", null]},
+    "rationale_teacher": {"type": ["string", "null"]},
+    "answer_source": {"enum": ["geometry", "physics", "combinatorics"]},
+    "scene": {"type": "object"},
+    "teacher_model": {"type": ["string", "null"]},
+    "teacher_provider": {"type": ["string", "null"]},
+    "teacher_verified": {"type": ["boolean", "null"]},
+    "license": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

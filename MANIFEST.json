@@ -1,0 +1,56 @@
+{
+  "cube": {
+    "source": "cube_fold_v2_l2_900",
+    "n_scenes": 900,
+    "n_opposite": 900,
+    "n_visible": 900,
+    "n_records": 1800,
+    "n_with_rationale": 900,
+    "leak": false
+  },
+  "cube_records": 900,
+  "cube_opposite_records": 900,
+  "leak": {
+    "source": "cube_fold_v2_l1_300",
+    "n_scenes": 300,
+    "n_records": 300,
+    "n_with_rationale": 300,
+    "leak": true
+  },
+  "leak_records": 300,
+  "vessels": [
+    {
+      "split": "train48",
+      "source": "vessels_v2_sample50",
+      "n_scenes": 48,
+      "n_with_rationale": 48
+    },
+    {
+      "split": "train300",
+      "source": "vessels_v2_l2_300",
+      "n_scenes": 279,
+      "n_with_rationale": 279
+    },
+    {
+      "split": "test:n5",
+      "role": "held_out_scene",
+      "source": "vessels_v2_ood_n5",
+      "n_scenes": 50,
+      "n_with_rationale": 0
+    },
+    {
+      "split": "test:n6",
+      "role": "held_out_scene",
+      "source": "vessels_v2_ood_n6",
+      "n_scenes": 50,
+      "n_with_rationale": 0
+    }
+  ],
+  "vessels_records": 1281,
+  "structure": {
+    "n_test": 10,
+    "n_train": 240,
+    "n_records": 250
+  },
+  "structure_records": 250
+}
